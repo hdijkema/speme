@@ -1,0 +1,12 @@
+(use scmHash)
+
+(define x (-> scmHash new))
+(-> x put 'a 100)
+(-> x put 'b 121)
+(-> x put 'f 1212)
+(-> x put 'ggwe 122)
+(println (-> x get 'b))
+(-> x put 'b 'hello)
+(println (-> x get 'b))
+(-> x remove 'b)
+(println (-> x get 'b))

@@ -1,0 +1,27 @@
+Te Doen:
+--------
+
+* Zorgen dat f( x y . l) gaat werken. Dit moet worden gedaan door onder
+  water, bij het parsen, de . rest te converteren bij binnenkomst in de
+  sub.
+
+* Zorgen dat bij macro's ... gaat werken.
+  a. Hygienisch
+  b. in hun eigen context (variabelen) --> variabelen die lokaal worden gedefinieerd moeten dus een eigen id krijgen bij generatie, anders kan er een andere id zijn in de lexical scope!
+  c. met de echte pattern matching
+
+Gedaan:
+-------
+* symbol verwerking heeft een look-ahead nodig.
+
+* Lexical scoping --> defines binnen defines moeten locale variabelen opleveren.
+  Gebruik daar 'my' ipv 'our'. Tevens kunnen we daar geen 'sub <name>' definitie
+  doen. We moeten dus weten wanneer we in de hoofdscope uithangen, en wanneer niet.
+
+* MEMORY Leak Warning [NO PROBLEM, TESTED]: 
+  In de gaten houden. De implementatie van eq? vergt dat de lege lijst
+  gelijke geheugenlocatie heeft of een aparte verwerking van lege lijsten.
+  Nu is geimplementeerd een gelijke geheugenlocatie. Hetgeen betekent
+  dat alle lijsten uiteindelijk uitmonden in dezelfde lege lijst locatie.
+  Dat zou een memory leak kunnen worden.
+

@@ -1,0 +1,9 @@
+
+
+
+### Global variable scope ###
+In speme, extensive use is made from 'use vars'. 
+This seems to be the best way to declare global variable scope.
+See http://darkness.codefu.org/wordpress/2003/03/perl-scoping/
+
+

@@ -1,0 +1,13 @@
+Package: speme
+Version: 0.0.2.precise.3
+Section: devel
+Priority: optional
+Architecture: all
+Essential: no
+Depends: libmath-round-perl,libterm-readline-gnu-perl
+Homepage: http://speme.sourceforge.net
+Pre-Depends: perl 
+Installed-Size: 65
+Maintainer: Hans Oesterholt <debian@oesterholt.net>
+Provides: speme
+Description: A scheme implementation for perl.

@@ -1,0 +1,6 @@
+speme (0.0.2.%%DISTRO%%.%%SUBVERSION%%) %%DISTRO%%; urgency=low
+  * Nothing interesting, just development
+ -- Hans Oesterholt (Lives in the Netherlands) <debian@oesterholt.net>  Wed, 02 May 2012 11:49:35 +0200
+speme (0.0.1.%%DISTRO%%.%%SUBVERSION%%) %%DISTRO%%; urgency=low
+  * Initial release
+ -- Hans Oesterholt (Lives in the Netherlands) <debian@oesterholt.net>  Wed, 02 May 2012 11:49:35 +0200

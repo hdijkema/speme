@@ -1,0 +1,11 @@
+ (define y 2)
+
+ (define-syntax max
+     (syntax-rules ()
+       ((_ a) (let ((count 0))
+                 (set! count (+ count 1))
+                 (print count)
+                 (* y a)))
+       ((_ a b) (+ (max a) (max b)))
+       ((_ a b ...) (+ (max a) (max b ...)))))
+

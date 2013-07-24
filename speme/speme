@@ -1,0 +1,10 @@
+#!/bin/bash
+if [ -e ./scm.pl ]; then
+  exec perl -I. scm.pl $@
+else 
+  if [ -e ../scm.pl ]; then
+     exec perl -I.. ../scm.pl $@
+  else 
+     exec perl -I/usr/share/speme /usr/share/speme/scm.pl $@
+  fi
+fi

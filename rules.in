@@ -1,0 +1,24 @@
+BACKUP=/tmp/speme_${VERSION}.${DISTRO}.${SUBVERSION}.tar.gz
+
+
+build: 
+	tar czf ${BACKUP} speme
+	@echo "!!!!!! build done"
+	
+binary: binary-arch binary-indep
+	@echo "!!!!!! binary done"
+	pwd
+	ls -l
+	ls -l debian
+	
+binary-arch: build
+	@echo "!!!!!! binary-arch done"
+	
+binary-indep: build
+	(cd speme;make deb VERSION=${VERSION} SUBVERSION=${SUBVERSION} DISTRO=${DISTRO})
+	@echo "!!!!!! binary-indep done"
+
+clean:
+	@if [ -r ${BACKUP} ]; then echo "cleaning up";rm -rf speme; tar xzf ${BACKUP};fi
+	@rm -f ${BACKUP}
+	@echo "!!!!!! clean done"

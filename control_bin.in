@@ -1,0 +1,13 @@
+Package: speme
+Version: %%VERSION%%.%%DISTRO%%.%%SUBVERSION%%
+Section: devel
+Priority: optional
+Architecture: all
+Essential: no
+Depends: %%DEPENDS%%
+Homepage: http://speme.sourceforge.net
+Pre-Depends: perl 
+Installed-Size: 65
+Maintainer: Hans Oesterholt <debian@oesterholt.net>
+Provides: speme
+Description: A scheme implementation for perl.
